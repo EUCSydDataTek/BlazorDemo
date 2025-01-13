@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="card mt-2">
+        <div class="card-header">Counter</div>
+        <div class="card-body">
+            <h3>@Model.Count</h3>
+            <a class="btn btn-primary" asp-route-Count="@Model.Count" asp-page-handler="Add">Add</a>
+        </div>
+    </div>
+</div>

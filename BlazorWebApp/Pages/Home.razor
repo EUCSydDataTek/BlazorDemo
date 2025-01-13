@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div class="container">
+    <div class="card mt-2">
+        <div class="card-header">Counter</div>
+        <div class="card-body">
+            <h3>@Count</h3>
+            <button class="btn btn-primary" @onclick="Click">Add</button>
+        </div>
+    </div>
+</div>
+
+@code{
+
+    public int Count = 0;
+
+    public void Click()
+    {
+        Count++;
+    }
+}
