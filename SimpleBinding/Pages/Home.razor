@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<h1>@name</h1>
+
+<input type="text" @bind="name" />
+
+<button @onclick="Click" >Reset</button>
+
+@code {
+    private string name = "John Doe";
+
+    private void Click()
+    {
+        name = "John Doe";
+    }
+}
