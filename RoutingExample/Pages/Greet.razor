@@ -1,0 +1,10 @@
+﻿@page "/greet"
+
+<h1>Hello @name</h1>
+
+@code {
+
+    [SupplyParameterFromQuery]
+    public string name { get; set; } = "john doe";
+
+}
