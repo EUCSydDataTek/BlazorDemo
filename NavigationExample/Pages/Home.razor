@@ -1,0 +1,28 @@
+﻿@page "/"
+@inject NavigationManager _Nav
+
+<PageTitle>Home</PageTitle>
+
+<h1>Index</h1>
+
+<button class="btn btn-primary" @onclick='() => _Nav.NavigateTo("greet?name=John%20Doe")'>Greet John</button>
+
+<hr class="mt-5" />
+
+<h2>Calculator</h2>
+
+<label class="form-label form-text" for="NumA">a:</label>
+<input class="form-control" type="number" id="NumA" @bind="a" />
+<label class="form-label form-text" for="NumB">b:</label>
+<input class="form-control" type="number" id="NumB" @bind="b" />
+<button class="btn btn-success mt-2" @onclick="Calculate">Calculate</button>
+
+@code {
+    private int a, b;
+
+    private void Calculate()
+    {
+        _Nav.NavigateTo($"calc/{a}/{b}");
+    }
+
+}

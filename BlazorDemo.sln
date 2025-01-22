@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingExample", "RoutingEx
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "24. Components", "24. Components", "{72F7BDD3-3EFA-42CE-A5B8-AF6501526EB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationExample", "NavigationExample\NavigationExample.csproj", "{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{6FDBD6EE-7782-467C-8115-957302DC439D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FDBD6EE-7782-467C-8115-957302DC439D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FDBD6EE-7782-467C-8115-957302DC439D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +79,6 @@ Global
 		{714AF67A-B79D-410F-BCCE-9F57A5B3E80A} = {9463417C-56BE-46E5-A829-55349F8814B4}
 		{D6C471FF-EEBF-4FB2-BE99-1B58DAF069DA} = {9463417C-56BE-46E5-A829-55349F8814B4}
 		{6FDBD6EE-7782-467C-8115-957302DC439D} = {106E2AAC-6961-43C3-AA7C-16C0D7274E94}
+		{D9ED2E21-E3B9-4B08-8AE3-B2198EB83F6E} = {106E2AAC-6961-43C3-AA7C-16C0D7274E94}
 	EndGlobalSection
 EndGlobal

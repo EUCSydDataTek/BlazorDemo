@@ -1,0 +1,13 @@
+﻿@page "/calc/{a:double}/{b:double}"
+
+<h1>@a + @b = @(a + b)</h1>
+
+@code {
+
+    [Parameter]
+    public double a { get; set; }
+    
+    [Parameter]
+    public double b { get; set; }
+
+}
