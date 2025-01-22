@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20. Blazor intro", "20. Blazor intro", "{D7E84138-0B53-4911-9249-368306BA0D9F}"
 EndProject
@@ -21,9 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DISharedServices", "DIShare
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerDI", "BlazorServerDI\BlazorServerDI.csproj", "{D6C471FF-EEBF-4FB2-BE99-1B58DAF069DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "23. Routing", "23. Routing", "{106E2AAC-6961-43C3-AA7C-16C0D7274E94}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "23. Routing og Navigation", "23. Routing og Navigation", "{106E2AAC-6961-43C3-AA7C-16C0D7274E94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingExample", "RoutingExample\RoutingExample.csproj", "{6FDBD6EE-7782-467C-8115-957302DC439D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "24. Components", "24. Components", "{72F7BDD3-3EFA-42CE-A5B8-AF6501526EB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

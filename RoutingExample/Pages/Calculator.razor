@@ -1,6 +1,6 @@
-﻿@page "/calc/{a}/{b}"
+﻿@page "/calc/{a:double}/{b:double}"
 
-<h3>@(a + b)</h3>
+<h1>@a + @b = @(a + b)</h1>
 
 @code {
 
