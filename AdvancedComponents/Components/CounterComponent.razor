@@ -1,0 +1,23 @@
+﻿<div class="card">
+    <div class="card-body">
+        <h1>Counter</h1>
+
+        <p role="status">Current count: @currentCount</p>
+
+        <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+      
+        <ThemeInfoComponent/>
+    </div>
+</div>
+
+@code {
+
+    [CascadingParameter(Name = "CurrentCount")]
+    private int currentCount { get; set; } = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+  }

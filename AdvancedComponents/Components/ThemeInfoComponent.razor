@@ -1,0 +1,8 @@
+﻿<div class="alert alert-primary mt-2 p-2">
+    <p class="mb-0" >The theme is @theme</p>
+</div>
+
+@code {
+    [CascadingParameter(Name = "Theme")]
+    public string theme { get; set; }
+}

@@ -1,0 +1,15 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<CascadingValue Value="currentCount" Name="CurrentCount">
+    <CounterComponent/>
+</CascadingValue>
+
+<button class="btn btn-primary mt-1" @onclick="() => currentCount += 5">Add 5</button>
+
+<p class="mt-2" >Current Count: @currentCount</p>
+
+@code {
+    public int currentCount = 1;
+}
