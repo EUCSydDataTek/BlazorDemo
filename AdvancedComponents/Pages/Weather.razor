@@ -3,38 +3,24 @@
 
 <PageTitle>Weather</PageTitle>
 
-<h1>Weather</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th aria-label="Temperature in Celsius">Temp. (C)</th>
-                <th aria-label="Temperature in Farenheit">Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<WeatherComponent forecasts="forecasts" Context="Forecast">
+    <Top>
+        <h3>Weather Forecasts</h3>
+    </Top>
+    <ItemTemplate>
+        <div class="card bg-primary text-white mt-1 mb-1">
+            <div class="card-header">@Forecast.Date.ToShortDateString()</div>
+                <div class="card-body">
+                    <p>Temp: @Forecast.TemperatureC C° / @Forecast.TemperatureF F°</p>
+                    <p>Summary: @Forecast.Summary</p>
+                </div>
+        </div>
+    </ItemTemplate>
+    <LoadingTemplate>
+        <div class="spinner-border" role="status"></div>
+        <p><em>Loading...</em></p>
+    </LoadingTemplate>
+</WeatherComponent>
 
 @code {
     private WeatherForecast[]? forecasts;
@@ -44,14 +30,5 @@ else
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
 
-    public class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-
-        public int TemperatureC { get; set; }
-
-        public string? Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
+    
 }

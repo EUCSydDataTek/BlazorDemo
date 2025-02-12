@@ -1,0 +1,36 @@
+﻿
+
+    <div class="card">
+        <div class="card-header">
+            @Top
+        </div>
+        <div class="card-body">
+            @if (forecasts == null)
+            {
+                @LoadingTemplate
+            }
+            else
+            {
+                @foreach (var forecast in forecasts)
+                {
+                    @ItemTemplate(forecast)
+                }
+            }
+        </div>
+    </div>
+
+@code {
+
+    [Parameter]
+    public WeatherForecast[]? forecasts { get; set; }
+
+    [Parameter]
+    public RenderFragment Top { get; set; } = default;
+
+    [Parameter, EditorRequired]
+    public RenderFragment<WeatherForecast> ItemTemplate { get; set; } = default;
+
+    [Parameter, EditorRequired]
+    public RenderFragment LoadingTemplate { get; set; } = default;
+
+}
