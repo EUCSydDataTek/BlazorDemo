@@ -1,0 +1,23 @@
+﻿<div class="card mb-4 mt-4">
+    <div class="card-header">Name box</div>
+    <div class="card-body">
+        <label for="NameBoxName" >Your Name:</label>
+        <input @bind="Name" class="form-control" type="text" name="NameBoxName" />
+        <button class="btn btn-primary mt-2" @onclick="SetName">Set Name</button>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Name { get; set; }
+
+    [Parameter]
+    public EventCallback<string> NameChanged { get; set; }
+
+    public async Task SetName()
+    {
+        await NameChanged.InvokeAsync(Name);
+    }
+
+}
