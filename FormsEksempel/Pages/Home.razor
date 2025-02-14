@@ -1,0 +1,35 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<EditForm OnSubmit="Submit" Model="Model">
+    <input @bind="Model.FirstName" type="text" name="FistName" placeholder="First Name" />
+
+    <input @bind="Model.Email" type="email" name="Email" placeholder="Email" />
+
+    <button type="submit" >Submit</button>
+</EditForm>
+
+@if (Submitted)
+{
+    <h1>Hello @Model?.FirstName</h1>
+}
+
+@code {
+    public bool Submitted = false;
+
+    private ContactForm Model = new ContactForm();
+
+    public void Submit()
+    {
+        Submitted = true;
+    }
+
+    private class ContactForm
+    {
+        public string FirstName { get; set; }
+
+        public string Email { get; set; }
+    }
+
+}
