@@ -1,0 +1,26 @@
+﻿@inherits TestContext
+@using UnitTestCalculatorDemo.Services;
+
+@code {
+
+    public CounterComponentTest()
+    {
+        this.Services.AddSingleton<ICounterService, CounterService>();
+    }
+
+    [Fact]
+    public void TestCounterCounting()
+    {
+        //arrange
+        var CounterService = this.Services.GetRequiredService<ICounterService>();
+        CounterService.Increment();
+
+        //Act
+        var cut = this.RenderComponent<CounterComponent>();
+        cut.Find("#Counter-Button").Click();
+
+        //Assert
+        cut.Find("#Counter-Count").MarkupMatches("""<div id="Counter-Count">The count is 2</div>""");
+    }
+
+}

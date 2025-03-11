@@ -1,0 +1,25 @@
+﻿@inject UnitTestCalculatorDemo.Services.ICounterService CounterService;
+
+<div class="card">
+    <div class="card-header">Counter</div>
+    <div class="card-body">
+        <div id="Counter-Count">The count is @Count</div>
+        <button id="Counter-Button" class="btn btn" @onclick="Increment" >Increment</button>
+    </div>
+</div>
+
+@code {
+
+    int Count = 0;
+
+    protected override void OnInitialized()
+    {
+        Count = CounterService.GetCount();
+    }
+
+    public void Increment()
+    {
+        CounterService.Increment();
+        Count = CounterService.GetCount();
+    }
+}
