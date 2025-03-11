@@ -1,0 +1,19 @@
+﻿
+<div class="alert alert-primary" style="width: 100px">@ParameterA + @ParameterB = @Result</div>
+
+@code {
+
+    [Parameter]
+    public int ParameterA { get; set; }
+
+    [Parameter]
+    public int ParameterB { get; set; }
+
+    private int Result = 0;
+
+    protected override void OnParametersSet()
+    {
+        Result = ParameterA + ParameterB;
+    }
+    
+}

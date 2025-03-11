@@ -1,0 +1,16 @@
+﻿@code {
+
+    [Fact]
+    public void TestIfCalculationIsCorrect()
+    {
+        //Arrange
+        TestContext context = new TestContext();
+
+        // Act
+        var cut = context.Render(@<CalculatorComponent ParameterA="2" ParameterB="4" />);
+
+        // Assert
+        cut.MarkupMatches("""<div class="alert alert-primary" style="width:100px">2 + 4 = 6</div>""");
+    }
+
+}
