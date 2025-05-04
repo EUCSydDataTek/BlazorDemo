@@ -1,9 +1,4 @@
 ﻿using DISharedServices.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DISharedServices
 {
@@ -43,7 +38,5 @@ namespace DISharedServices
                 _todos.Remove(todo);
             }
         }
-
-
     }
 }

@@ -11,6 +11,8 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSingleton<ITodoService, TodoService>();
 
 // Scoped
+// In Blazor Server, a Scoped service is created once per user connection. This means that each user session (or SignalR connection) gets its own instance of the service.
+// If you open two browser instances (e.g., two separate tabs or windows), each instance will establish its own SignalR connection to the server. As a result, each browser instance will get its own separate instance of the TodoService.
 //builder.Services.AddScoped<ITodoService, TodoService>();
 
 // Trancient

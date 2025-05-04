@@ -35,7 +35,6 @@
     {
         var todo = todos.FirstOrDefault();
 
-        _TodoService.RemoveTodo(todo.Id);
+        _TodoService.RemoveTodo(todo!.Id);
     }
-
 }
